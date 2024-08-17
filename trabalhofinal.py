@@ -1,13 +1,13 @@
 from statistics import mean
 from time import sleep
 
-nomes = ["Neymar", "Cleiton", "Guilherme", "Lebron"]
+nomes = ["RAFAEL", "CLEITON", "GUILHERME", "LEBRON"]
 idades = [31,20,21,20]
 pesos = [68,90,63,107]
 alturas = [1.75,1.80,1.74,1.87]
 imcs = [22,28,20,30]
 def incluir():
-    nome = input("Digite o nome do aluno: ")
+    nome = input("Digite o nome do aluno: ").upper()
 
     try:
         idade = int(input("Digite a idade do aluno: "))
@@ -35,7 +35,7 @@ def listar():
     print(f"a média do imc dos alunos é: {mediaimc}")
 
 def listarum():
-    nome=input("Digite o nome do aluno: ")
+    nome = input("Digite o nome do aluno: ").upper()
     try:
         i = nomes.index(nome)
         print(f"{nomes[i]}, {idades[i]} anos de idade, {pesos[i]} de peso, {alturas[i]} de altura, IMC = {imcs[i]}")
@@ -63,22 +63,22 @@ def listarporidade():
 def inicio():
     while True:
         try:
-            menu=int(input("\nMENU\n\n1- Incluir Aluno \n2– Listar todos alunos e seus dados  \n\
+            menu = int(input("\nMENU\n\n1- Incluir Aluno \n2– Listar todos alunos e seus dados  \n\
 3- Listar os dados de um aluno \n4– Listar dados dos alunos de uma determinada idade \n9- Fim\n\n"))
             
-            if menu==1:
+            if menu == 1:
                 incluir()
 
-            elif menu==2:
+            elif menu == 2:
                 listar()
 
-            elif menu==3:
+            elif menu == 3:
                 listarum()
 
-            elif menu==4:
+            elif menu == 4:
                 listarporidade()
 
-            elif menu==9:
+            elif menu == 9:
                 print("Encerrando.")
                 sleep(0.5)
                 print("Encerrando..")
@@ -89,4 +89,5 @@ def inicio():
                 print("Essa não é uma das opções.")
         except:
             print("NÚMEROOOOOS")
+
 inicio()
